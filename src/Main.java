@@ -10,7 +10,7 @@ public class Main {
         //Variabila 8
         int inches = 79;
         //Variabila 9
-        int distanta = 10000;
+        double distanta = 10000;
         int ore = 0;
         int minute = 37;
         int secunde = 30;
@@ -20,10 +20,10 @@ public class Main {
         printHelloName();
 
         // 2
-        System.out.println("Rezultatul adunarii: " + adunare(a,b));
-        System.out.println("Rezultatul Scaderii: " + scadere(a, b));
-        System.out.println("Rezultatul Inmultirii: " + inmultire(a, b));
-        System.out.println("Rezultatul Impartirii: " + impartire(a, b));
+        System.out.println("Rezultatul adunarii este: " + adunare(a,b));
+        System.out.println("Rezultatul Scaderii este: " + scadere(a, b));
+        System.out.println("Rezultatul Inmultirii este: " + inmultire(a, b));
+        System.out.println("Rezultatul Impartirii este: " + impartire(a, b));
 
         // 3
         printJavaLogo();
@@ -44,15 +44,15 @@ public class Main {
         System.out.println("Distanta in metri: " + inchIntoMeters(inches));
 
         // 9
-        calculViteza(distanta, ore, minute,secunde);
+        speed(distanta, ore, minute,secunde);
     }
 
-    // Problema 1
+    //  1
     public static void printHelloName() {
         System.out.println("Hello\nCristian");
     }
 
-    // Problema 2
+    //  2
     public static int adunare(int a, int b) {
         return a + b;
     }
@@ -69,7 +69,7 @@ public class Main {
         return a / b;
     }
 
-    // Problema 3
+    //  3
     public static void printJavaLogo() {
         System.out.println("""
            J    a   v     v  a
@@ -78,12 +78,12 @@ public class Main {
          JJ  a     a   V  a     a""");
     }
 
-    // Problema 4
+    //  4
     public static double media(int a, int b, int c) {
         return (a + b + c) / 3.0;
     }
 
-    // Problema 5
+    //  5
     public static void printSmiley() {
         System.out.println(" +\"\"\"\"\"+ ");
         System.out.println("[| o o |]");
@@ -92,30 +92,33 @@ public class Main {
         System.out.println(" +-----+ ");
     }
 
-    // Problema 6
+    //  6
     public static int restImpartire(int a, int b) {
+
         return a % b;
     }
 
-    // Problema 7
+    //  7
     public static double fahrenheitToCelsius(double f) {
+
         return 5.0 / 9 * (f - 32);
     }
 
-    // Problema 8
+    //  8
     public static double inchIntoMeters(double inch) {
+
         return inch * 0.0254;
     }
 
-    // Problema 9
-    public static void calculViteza(double distanta, int ore, int minute, int secunde) {
-        double timpInSecunde = ore * 3600 + minute * 60 + secunde;
-        double vitezaMs = distanta / timpInSecunde;
-        double vitezaKmh = (distanta / 1000) / (timpInSecunde / 3600);
-        double vitezaMph = (distanta / 1609) / (timpInSecunde / 3600);
+    //  9
+    public static void speed(double distance, int hours, int minutes, int seconds) {
+        double timeInSeconds = hours * 3600 + minutes * 60 + seconds;
+        double vitezaMs = distance / timeInSeconds;
+        double vitezaKmh = (distance / 1000) / (timeInSeconds / 3600);
+        double vitezaMph = (distance / 1609) / (timeInSeconds / 3600);
 
-        System.out.println("Viteza in m/s: " + vitezaMs);
-        System.out.println("Viteza in km/h: " + vitezaKmh);
-        System.out.println("Viteza in mph: " + vitezaMph);
+        System.out.println("Viteza in m/s este: " + vitezaMs);
+        System.out.println("Viteza in km/h este: " + vitezaKmh);
+        System.out.println("Viteza in mph este: " + vitezaMph);
     }
 }
