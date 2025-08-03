@@ -10,7 +10,7 @@ public class Main {
         //Variabila 8
         int inches = 79;
         //Variabila 9
-        int distanta = 10000;
+        double distanta = 10000;
         int ore = 0;
         int minute = 37;
         int secunde = 30;
